@@ -219,8 +219,8 @@ def post_register():
         if len(postcode)<5 or len(postcode)>8:
             errors.append("Your post code must be more than 5 characters long and less than 8")
         if phone.startswith("+"):
-            phone_validation=phone[1:]
-        if not phone_validation.isdigit():
+            phone=phone[1:]
+        if not phone.isdigit():
                 errors.append('Your phone should containe just digits (except for the leading +)')
         elif len(phone)<11 or len(phone)>13:
                 errors.append("Your phone must be more than 11 characters long and less than 13")
